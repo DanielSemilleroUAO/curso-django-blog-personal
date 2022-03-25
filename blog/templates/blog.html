@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %} {{post.title}} {% endblock %}
+
+{% block content %}
+<main class="main-blog">
+    <div class="main-blog__content">
+        <img src="http://127.0.0.1:8000/media/{{ post.image }}" alt="">
+        <article class="blog-content__article">
+            <h4>Noticia</h4>
+            <h1>{{ post.title }}</h1>
+            <div>
+                {{ post.content|safe }}
+            </div>
+        </article>
+    </div>
+</main>
+
+{% endblock %}
